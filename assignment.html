@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+<!--style-->
+    <style>
+        body {
+      padding-top: 70px;}
+    .flex {
+     display: inline-flex;
+     width: 100%;}
+     .row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+marquee{
+  color:red;
+  font-size:x-large;
+  font-weight: 600;
+  font-style: italic;
+
+}
+h2{
+  text-align:center;
+  color:darkblue;
+}
+img{
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+  min-height:100px;}
+p
+{
+text-align: center;
+}
+#wrapper {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.but-group button{
+display:block;
+width:200px;
+}
+
+.container{
+  height:auto;
+  width:auto;
+}
+
+    </style>
+
+
+
+<!--javascript-->
+
+    <script>
+       function assign(){   
+  
+        if(arow1.childElementCount>0){         
+        var ass=arow1.firstElementChild;
+        arow1.removeChild(ass); 
+        revrow1.appendChild(ass);}
+
+        
+        else if(arow2.childElementCount>0){  
+          ass=arow2.firstElementChild
+        arow2.removeChild(ass); 
+         revrow2.appendChild(ass);}
+
+
+
+        else if(arow3.childElementCount>0){  
+          ass=arow3.firstElementChild
+        arow3.removeChild(ass); 
+        revrow3.appendChild(ass);}
+
+
+
+        else if(arow4.childElementCount>0){  
+           ass=arow4.firstElementChild;
+        arow4.removeChild(ass); 
+        revrow4.appendChild(ass);}
+        else
+        {
+          alert("No More Personnels Available to assign");
+        }
+
+        
+        
+
+       }
+       function revoke(){
+
+        if(revrow1.childElementCount>0){ 
+          var elem =    revrow1.firstElementChild;    
+        revrow1.removeChild(elem); 
+        arow1.appendChild(elem);
+      }
+
+
+
+        else if(revrow2.childElementCount>0){  
+         elem = revrow2.firstElementChild;
+        revrow2.removeChild(elem); 
+        arow2.appendChild(elem);}
+
+
+
+        else if(revrow3.childElementCount>0){     
+         elem = revrow3.firstElementChild;
+        revrow3.removeChild(elem); 
+        arow3.appendChild(elem);}
+
+
+
+        else if(revrow4.childElementCount>0){  
+         elem = revrow4.firstElementChild;
+        revrow4.removeChild(elem); 
+        arow4.appendChild(elem);}
+        else
+        {
+          alert("No More Personnels Available to revoke");
+        }
+  
+
+
+       }
+
+
+    </script>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+<!--body-->
+<body>
+<div class="container-fluid">
+    <h1 style="text-align:center;color:blueviolet">Delivery Personnel Manager</h1><br>
+</div>
+<div class="container">
+
+
+  <!--row with three columns-->
+  <div class="row">
+
+    <!--personnel assign division that consists of personnels to be assigned and revoked personnels-->
+    <div id="div1" class="col-md-4" style="background-color:lavender;">
+        <marquee behavior="alternate">REVOKED</marquee>
+
+
+        <div class="row flex match-to-row" id="arow1">
+            <div class="col-md-4 col-4">
+              <div id="1">
+                 <img src="./images/nymish.jpg" class="img-fluid" alt="">
+                 <p>NYMISH</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-4">
+              <div id="1">
+                 <img src="./images/nischal.png" class="img-fluid" alt="">
+                 <p>NISCHAL</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-4">
+              <div id="3">
+                 <img src="./images/tarun.png" class="img-fluid" alt="">
+                 <p>TARUN</p>
+              </div>
+            </div>
+        </div>
+      
+            <div class="row flex match-to-row" id="arow2">
+              <div class="col-md-4 col-4">
+                <div id="4">
+      
+                  <img src="./images/praneeth.jpg" class="img-fluid" alt=""><p>PRANEETH</p>
+                </div>
+              </div>
+              <div class="col-md-4 col-4">
+                <div id="5">
+      
+                  <img src="./images/yashwanth.jpg" class="img-fluid" alt=""><p>YASHWANTH</p>
+                </div>
+              </div>
+              <div class="col-md-4 col-4">
+                <div id="6">
+      
+                  <img src="./images/sankeeth.png" class="img-fluid" alt=""><p>SANKEETH</p>
+                </div>
+              </div>
+            </div>
+      
+              <div class="row flex match-to-row" id="arow3">
+                <div class="col-md-4 col-4">
+                  <div id="7">
+      
+                    <img src="./images/neil.png" class="img-fluid" alt=""><p>NEIL</p>
+                  </div>
+                </div>
+                <div class="col-md-4 col-4">
+                  <div id="8">
+      
+                    <img src="./images/raghu.jpg" class="img-fluid" alt=""><p>RAGHU</p>
+                  </div>
+                </div>
+                <div class="col-md-4 col-4">
+                  <div id="9">
+      
+                    <img src="./images/saurabh.jpg" class="img-fluid" alt=""><p>SAURABH</p>
+                  </div>
+                </div>
+          </div>
+          <div class="row flex match-to-row" id="arow4">
+            <div class="col-md-4 col-4">
+              <div id="10">
+  
+                <img src="./images/ankit.png" class="img-fluid" alt=""><p>ANKIT</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-4">
+              <div id="11">
+  
+                <img src="./images/sai tarun.png" class="img-fluid" alt=""><p>SAI TARUN</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-4">
+              <div id="12">
+  
+                <img src="./images/siddharth.png" class="img-fluid" alt=""><p>SIDDHARTH</p>
+              </div>
+            </div>
+      </div>
+          
+
+
+
+
+
+        </div>
+
+
+        <!--second column with buttons-->
+    <div id="wrapper" class="col-md-4" style="background-color:rgb(199, 232, 241);">
+    <div class="but-group">
+      <br>
+      <button class="btn btn-large btn-success" onclick="assign();" >ASSIGN</button>
+      <br>
+    <button class="btn btn-large btn-danger" onclick="revoke();">REVOKE</button>
+    <br>
+  </div>
+
+    
+    
+    
+    
+    </div>
+
+
+
+
+
+
+
+
+
+<!--revoke column that displays assigned personnels-->
+    <div id="div2" class="col-md-4" style="background-color:lavender;">
+    
+    <marquee behavior="alternate">ASSIGNED</marquee>
+    
+        <div class="row flex match-to-row" id="revrow1">
+            
+        </div>
+      
+            <div class="row flex match-to-row" id="revrow2">
+            </div>
+      
+              <div class="row flex match-to-row" id="revrow3">
+
+          </div>
+          <div class="row flex match-to-row" id="revrow4">
+ 
+      </div>
+          
+    
+
+    
+    
+    </div>
+  </div>
+</div>
+<br><br><br>
+</body>
+</html>
